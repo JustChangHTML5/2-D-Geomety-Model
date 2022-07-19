@@ -16,17 +16,14 @@ public class Ellipse extends Shape {
       this.axis2 = axis2;
    }
    
+   @Override
    public double getArea() {
       return axis1 * axis2 * Math.PI;
    }
    
+   @Override
    public double getPerimeter() {
       return Math.PI * (3 * (axis1 + axis2) - Math.sqrt((3 * axis1 + axis2) * (axis1 + 3 * axis2))); 
-   }
-   
-   @Override
-   public String toString() {
-      return this.getClass().getSimpleName() + " " + this.getArea() + " " + this.getPerimeter();
    }
    
 }

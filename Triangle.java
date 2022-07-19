@@ -2,9 +2,6 @@ package model;
 import java.lang.Math;
 
 public class Triangle extends Polygon {
-   public double side1;
-   public double side2;
-   public double side3;
    
    public Triangle() {
       super(3);
@@ -12,22 +9,24 @@ public class Triangle extends Polygon {
    
    public Triangle(double side1, double side2, double side3) {
       super(3);
-      this.side1 = side1;
-      this.side2 = side2;
-      this.side3 = side3;
+      this.sides[0] = side1;
+      this.sides[1] = side2;
+      this.sides[2] = side3;
    }
    
+   @Override
    public double getArea() {
-      double s = (this.side1 + this.side2 + this.side3) / 2;
-      return Math.sqrt(s*(s-this.side1)*(s-this.side2)*(s-this.side3));
+      double s = (this.sides[0] + this.sides[1] + this.sides[3]) / 2;
+      return Math.sqrt(s*(s-this.sides[0])*(s-this.sides[1])*(s-this.sides[2]));
    }
    
+   @Override
    public double getPerimeter() {
-      return this.side1 + this.side2 + this.side3;
+      return this.sides[0] + this.sides[1] + this.sides[2];
    }
    
    @Override
    public String toString() {
-      return this.getClass().getSimpleName() + " " + this.getArea() + " " + this.getPerimeter();
+      return super.toString() + " " + this.sides[0] + " " + this.sides[1] + " " + this.sides[2];
    }
 }

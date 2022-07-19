@@ -1,8 +1,6 @@
 package model;
 
-public class Square extends Rectangle{
-   
-   public double side;
+public class Square extends Rectangle {
 
    public Square() {
       super();
@@ -12,16 +10,12 @@ public class Square extends Rectangle{
       super(side, side);
    }
    
-   public double getArea() {
-      return super.getArea();
+   public double getSide() {
+      return super.side;
    }
    
-   public double getPerimeter() {
-      return super.getPerimeter();
-   }
-   
-   @Override
-   public String toString() {
-      return this.getClass().getSimpleName() + " " + this.getArea() + " " + this.getPerimeter();
+   public void setSide(double side) {
+      super.side = side;
+      super.side2 = side;
    }
 }

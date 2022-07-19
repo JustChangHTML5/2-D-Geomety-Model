@@ -2,14 +2,25 @@ package model;
 
 public abstract class Polygon extends Shape{
    
-   public int sides;
+   public double[] sides;
    
    public Polygon() {
       super();
    }
    
-   public Polygon(int sides) {
+   public Polygon(int size) {
       super();
-      this.sides = sides;
+      sides = new double[size];
+   }
+   
+   /*@Override
+   public double computePerimeter() {
+      
+   }*/
+   
+   @Override
+   public String toString() {
+      return super.toString() + "size: " + sides.length;
+      
    }
 }

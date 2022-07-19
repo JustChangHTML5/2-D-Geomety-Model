@@ -1,6 +1,6 @@
 package model;
 
-public class Circle extends Ellipse{
+public class Circle extends Ellipse {
    
    public double radius;
 
@@ -12,16 +12,12 @@ public class Circle extends Ellipse{
       super(radius, radius);
    }
    
-   public double getArea() {
-      return super.getArea();
+   public double getRadius() {
+      return super.axis1;
    }
    
-   public double getPerimeter() {
-      return super.getPerimeter();
-   }
-   
-   @Override
-   public String toString() {
-      return this.getClass().getSimpleName() + " " + this.getArea() + " " + this.getPerimeter();
+   public void setRadius(double radius) {
+      super.axis1 = radius;
+      super.axis2 = radius;
    }
 }

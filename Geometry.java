@@ -9,15 +9,29 @@ import model.Circle;
 public class Geometry {
    
    public static void main(String args[]) {
-      Square square = new Square(10);
-      System.out.println(square.toString());
-      Rectangle rectangle = new Rectangle(20, 30);
-      System.out.println(rectangle.toString());
-      Triangle triangle = new Triangle(30, 40, 50);
-      System.out.println(triangle.toString());
-      Circle circle = new Circle(15);
-      System.out.println(circle.toString());
-      Ellipse ellipse = new Ellipse(20, 15);
-      System.out.println(ellipse.toString());
+      if (args[0].equals("Square")) {
+         Square square = new Square(Integer.parseInt(args[1]));
+         System.out.println(square.toString());
+      }
+      
+      if (args[0].equals("Rectangle")) {
+         Rectangle rectangle = new Rectangle(Integer.parseInt(args[1]), Integer.parseInt(args[2]));
+         System.out.println(rectangle.toString());
+      }
+      
+      if (args[0].equals("Triangle")) {
+         Triangle triangle = new Triangle(Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]));
+         System.out.println(triangle.toString());
+      }
+      
+      if (args[0].equals("Circle")) {   
+         Circle circle = new Circle(Integer.parseInt(args[1]));
+         System.out.println(circle.toString());
+      }
+      
+      if (args[0].equals("Ellipse")) {
+         Ellipse ellipse = new Ellipse(Integer.parseInt(args[1]), Integer.parseInt(args[2]));
+         System.out.println(ellipse.toString());
+      }
    }
 }
